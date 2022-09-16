@@ -1,0 +1,24 @@
+{
+  "description": "First NFT deployed using ERC721 smart contract on Rinkeyby.", 
+  "external_url": "https://alchemy.com", 
+  "image": "https://ipfs.filebase.io/ipfs/QmTVNBKHQwk5H5jLSVGfHyM2J3FQrw1QTRrbFF7njVode1", 
+  "name": "ERC721 BDNFT",
+  "attributes": [
+      {
+        "trait_type": "Type", 
+        "value": "Sport"
+      }, 
+      {
+        "trait_type": "Sport", 
+        "value": "Badminton"
+      },
+      {
+        "trait_type": "Website", 
+        "value": "Alchemy.com"
+      }, 
+      {
+        "trait_type": "Token Standard", 
+        "value": "ERC721"
+      }
+  ]
+}
