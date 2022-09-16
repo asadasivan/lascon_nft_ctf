@@ -36,10 +36,10 @@ Checkout the project and start using it.
    3. Select Storage Network: IPFS
    4. Upload the image which you want to be created as an NFT token.
    5. Copy the IPFS Gateway URL
-   6. Open the metadata file and update the "image" with IPFS Gateway URL. EX: https://ipfs.filebase.io/ipfs/<IPFS CID>
+   6. Open the metadata file and update the "image" with IPFS Gateway URL. EX: https://ipfs.filebase.io/ipfs/<IPFS CID\>
    7. Upload metadata.json to File Base.
    8. Copy the IPFS CID
-   9. Smart contract functions like safeMint and opensea.io marketplace require ipfs with the following format: ipfs://<CID> 
+   9. Smart contract functions like safeMint and opensea.io marketplace require ipfs with the following format: ipfs://\<CID\> 
    
 ## Use remixIDE to deploy and test smart contract:
    1. Test your smart contract using remixVM to ensure there are no bugs. 
@@ -51,13 +51,13 @@ Checkout the project and start using it.
    7. Under Deployed contracts > Test functions like safeMint, tokenURI, etc.
    8. safeMint function is used to mint NFT:
       * Enter the wallet address (Account address)
-      * Enter uri: ipfs://QmTyuUnyiAbAvdiqhyGW8hTjDgBqNHJmncF1FUkMNrfrzC
+      * Enter uri: ipfs://\<CID\> 
       *  Click transact button
    9. tokenURI function returns the URI of metadata file:
       * Enter 1 as in our smart contract, tokenId starts from 1 instead of 0.
       * Click the call button 
-      * Output will be as follows: ipfs://<IPFS CID>
-   10. Open the browser and go to https://ipfs.io/ipfs/<IPFS CID>
+      * Output will be as follows: ipfs://\<IPFS CID\>
+   10. Open the browser and go to https://ipfs.io/ipfs/<IPFS CID\>
 
 ## Deploy smart contract to Polygon testnet network instead of Ethereum mainnet network:
    1. Add Polygon Mumbai Testnet Network to metamask.
@@ -125,10 +125,10 @@ Checkout the project and start using it.
    1. Pinata is similar to FireBase. 
    2. Pin your content to IPFS with Pinata 
    3. https://app.pinata.cloud/
-   4. EX: https://gateway.pinata.cloud/ipfs/<CID>
+   4. EX: https://gateway.pinata.cloud/ipfs/\<CID\>
    5. Upload files/folder, and CID will be the baseURI
-   6. Folder: https://gateway.pinata.cloud/ipfs/<IPFS CID>/
-   7. File: https://gateway.pinata.cloud/ipfs/<IPFS CID>?filename=1.jpg	
+   6. Folder: https://gateway.pinata.cloud/ipfs/<IPFS CID\>/
+   7. File: https://gateway.pinata.cloud/ipfs/<IPFS CID\>?filename=1.jpg	
 	
 ## References:
    1. Solidity: https://soliditylang.org/
