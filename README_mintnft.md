@@ -1,5 +1,3 @@
-Lascon 2022 NFT CTF Challenge
-=============================
 
 ## Introduction
 This project contains information on how to mint a NFT token. 
