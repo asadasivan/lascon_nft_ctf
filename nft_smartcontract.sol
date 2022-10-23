@@ -70,5 +70,6 @@ contract MyNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 /*
   safeMint: uri => IPFS NFT metadata CID
   EX: ipfs://QmTyuUnyiAbAvdiqhyGW8hTjDgBqNHJmncF1FUkMNrfrzC
-  contract => 0x30552EC6D02d459f390B7EB725791066859e655A
+  contract => 0xCd274b6d4355f5949913618a73e97F9272B5c283
+  Testnet: https://mumbai.polygonscan.com/address/0xcd274b6d4355f5949913618a73e97f9272b5c283
 */
