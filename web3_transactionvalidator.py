@@ -3,7 +3,7 @@
 /*
  * @File: web3_transactionvalidator.py
  * @Author: Arunkumar Sadasivan
- * @Date: 10/05/2022
+ * @Date: 04/05/2018
  * @Description: Clone all repo's that belong to a group or organization. Repo's can be segregated based on the branch.
  * @Usage: python3 web3_transactionvalidator.py -c <contract address> -k <etherscan apikey> -v <code to validate>
  * @Dependencies: python3 -m pip install web3
@@ -23,7 +23,7 @@ from web3.middleware import geth_poa_middleware
 # Get all transactions executed for a particular contract address
 def getTransactionHistory(blockchainURL, contract_address, etherscan_apiKey):
     url = f"{blockchainURL}?module=account&action=txlist&address={contract_address}&startblock=0&endblock=99999999" \
-          f"&page=1&offset=10&sort=asc&apikey={etherscan_apiKey}"
+          f"&sort=asc&apikey={etherscan_apiKey}"
     try:
         response = requests.get(url)
         return response.json()["result"]
@@ -72,12 +72,14 @@ def getInputData(blockchainURL, nodeURL, contract_address, abi, etherscan_apiKey
     transaction_history = getTransactionHistory(blockchainURL, contract_address, etherscan_apiKey)
     contract = getWeb3Contract(nodeURL, contract_address, abi)
     inputDataArry = []
+    #print(transaction_history)
     for transactions in transaction_history:
+        print(transactions)
         funcName = transactions['functionName']
         if functionName == funcName:
             # Decode input data
             func_obj, func_params = contract.decode_function_input(transactions["input"])
-            # print(func_params)
+            print(func_params)
             data = func_params.get('data')
             inputDataArry.append(data.decode('utf-8'))  # bytes to string
     return inputDataArry
