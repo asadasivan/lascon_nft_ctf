@@ -74,14 +74,15 @@ def getInputData(blockchainURL, nodeURL, contract_address, abi, etherscan_apiKey
     inputDataArry = []
     #print(transaction_history)
     for transactions in transaction_history:
-        print(transactions)
-        funcName = transactions['functionName']
+        # print(transactions)
+        funcName = transactions["functionName"]
         if functionName == funcName:
             # Decode input data
             func_obj, func_params = contract.decode_function_input(transactions["input"])
-            print(func_params)
-            data = func_params.get('data')
-            inputDataArry.append(data.decode('utf-8'))  # bytes to string
+            # check if transaction succeeded
+            if (transactions.get("isError")) == "0":
+                data = func_params.get("data")
+                inputDataArry.append(data.decode("utf-8"))  # bytes to string
     return inputDataArry
 
 
