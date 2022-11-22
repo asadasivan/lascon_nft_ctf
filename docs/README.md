@@ -20,7 +20,7 @@ The following contains information on creating the challenge
 3. Trasfer NFT tokenID:1 to your address. Ensure to enter your name under data field.
 
 ## Getting Help
-contact Arunkumar Sadasivan <contact.arunsec@gmail.com>
+Contact Arunkumar Sadasivan <contact.arunsec@gmail.com>
 
 ## Contributing
 1. Fork it
